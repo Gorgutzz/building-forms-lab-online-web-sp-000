@@ -4,6 +4,9 @@ import Band from '../components/Band';
 import { connect } from 'react-redux';
 
 class BandsContainer extends Component {
+
+  renderBandNames = () => this.props.bands.map((band, id) => <Band key={id} name={band.name} />)
+
   render() {
     return(
       <div>
